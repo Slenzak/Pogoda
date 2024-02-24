@@ -18,6 +18,7 @@ using System.Windows.Shapes;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Net;
+using Newtonsoft.Json.Linq;
 
 
 namespace MapaPogodad
@@ -56,7 +57,13 @@ namespace MapaPogodad
                 HttpWebResponse response = (HttpWebResponse)request.GetResponse();
                 Stream resStream = response.GetResponseStream();
                 StreamReader sr = new StreamReader(resStream);
-                Trace.WriteLine(sr.ReadToEnd());
+                string responseBody = sr.ReadToEnd();
+                JObject weatherData = JObject.Parse(responseBody);
+                foreach (var item in weatherData)
+                {
+                    Trace.WriteLine(item.Key + ": " + item.Value);
+                }
+
             }
             catch (Exception ex)
             {

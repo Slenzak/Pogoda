@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "c5UFTCNGS5wBeHaz2WM7wlQ3pmL3xE56pcYzyzZDYuhIpdiKLdigyGjs6yoMqYmJ7Ehq7AtxludusIDRvOqhHw==",
+  "dgSpecHash": "+N/A1yIPf0MSlaTwJ07KDYjotePE6tJx7ijrdMehm64KFEEyN6/ikCYLXP3ZQUkdwu5bBhHZYsHr0cPYf7fJBw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\student\\source\\repos\\MapaPogodad\\MapaPogodad\\MapaPogodad.csproj",
+  "projectFilePath": "C:\\Users\\kubol\\source\\repos\\Pogoda\\MapaPogodad\\MapaPogodad\\MapaPogodad.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\student\\.nuget\\packages\\microsoft.maps.mapcontrol.wpf\\1.0.0.3\\microsoft.maps.mapcontrol.wpf.1.0.0.3.nupkg.sha512",
-    "C:\\Users\\student\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\kubol\\.nuget\\packages\\microsoft.maps.mapcontrol.wpf\\1.0.0.3\\microsoft.maps.mapcontrol.wpf.1.0.0.3.nupkg.sha512",
+    "C:\\Users\\kubol\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": [
     {
