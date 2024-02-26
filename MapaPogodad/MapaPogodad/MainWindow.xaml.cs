@@ -52,15 +52,23 @@ namespace MapaPogodad
                 Trace.WriteLine(secondloc+" "+firstloc);
                 double firstlocdouble = Convert.ToDouble(firstloc);
                 double secondlocdouble = Convert.ToDouble(secondloc);
-                string url = $"https://api.openweathermap.org/data/3.0/onecall?lat={firstlocdouble}&lon={secondlocdouble}&appid=30c4a448b7f41d650026b05f4ddf15b4&units=metric";
+                string url = $"https://api.openweathermap.org/data/3.0/onecall?lat={firstlocdouble}&lon={secondlocdouble}&appid=30c4a448b7f41d650026b05f4ddf15b4&units=metric&exclude=minutely";
                 HttpWebRequest request= (HttpWebRequest)WebRequest.Create(url);
                 HttpWebResponse response = (HttpWebResponse)request.GetResponse();
                 Stream resStream = response.GetResponseStream();
                 StreamReader sr = new StreamReader(resStream);
                 string responseBody = sr.ReadToEnd();
                 JObject weatherData = JObject.Parse(responseBody);
+                int temptime= new();
+
                 foreach (var item in weatherData)
                 {
+                    if (Convert.ToString(item.Key) == "dt")
+                    {
+                        temptime = 1000 * Int32.Parse((string)item.Value);
+                        var date = (new DateTime(1970, 1, 1)).AddMilliseconds(temptime);
+                        Trace.WriteLine(item.Key+": "+date);
+                    }else
                     Trace.WriteLine(item.Key + ": " + item.Value);
                 }
 
